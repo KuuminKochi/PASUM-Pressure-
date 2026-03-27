@@ -5,11 +5,11 @@
 
 ## Architecture & Setup
 
-- [ ] Set up project file structure (`main.cpp`, `questions.dat`, `story.txt`)
-- [ ] Define `struct Question` with `string* options` pointer array
-- [ ] Define `struct GameState` with `week`, `academic`, `jatiDiri`, `stress`
-- [ ] Write `main()` entry point with `while` game loop (week 1–7)
-- [ ] Write `initializeGame()` to set all starting values
+- [x] Set up project file structure (`main.cpp`, `questions.dat`, `story.txt`)
+- [x] Define `struct Question` with `string* options` pointer array
+- [x] Define `struct GameState` with `week`, `academic`, `jatiDiri`, `stress`
+- [x] Write `main()` entry point with `while` game loop (week 1–7)
+- [x] Write `initializeGame()` to set all starting values
 
 ---
 
