@@ -20,7 +20,7 @@ foundation life. Make the right choices — or burn out trying.
 | Nyla Safiyyah binti Mohammed Amin | Content, PAC |
 | Muhammad Faris bin Mohd Zamberi | Content, IPO |
 
-**Supervisor:** Sir Annas
+**Supervisor:** Sir Shan
 **Course:** FAC1003 Programming 2 — Centre for Foundation Studies in Science, UM
 
 ---
@@ -72,27 +72,16 @@ pasum_pressure.exe
 Week 1–7
 
 ├── Story Dialogue
-
 ├── Academic Quiz (Chemistry / Physics / Math)
-
 │   ├── Pass (≥ 50%) → Academic +10
-
 │   └── Fail (< 50%) → Stress +10, show notes
-
 ├── Interlude
-
 ├── Jati Diri Quiz
-
 │   ├── Pass (≥ 80%) → No change
-
 │   └── Fail (< 80%) → Stress ×1.2
-
 ├── Interlude
-
 └── Stress Check
-
 ├── Stress < 50 → Healthy Route, Stress ×0.5
-
 └── Stress ≥ 50 → Counsellor Route
 
 ---
