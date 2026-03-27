@@ -61,7 +61,9 @@ int main() {
 }
 ```
 
-Task P2 — Display the Score Summary Screen
+---
+
+## Task P2 — Display the Score Summary Screen
 
 What it does
 
@@ -134,7 +136,7 @@ Starting Point
 
 ---
 
-Task P3 — Input Validation Function
+## Task P3 — Input Validation Function
 
 What it does
 
@@ -203,7 +205,7 @@ Starting Point
 
 ---
 
-Task P4 — Subject Selection Menu
+## Task P4 — Subject Selection Menu
 
 What it does
 
@@ -281,7 +283,7 @@ Starting Point
 
 ---
 
-Task P5 — Display a Single Quiz Question
+## Task P5 — Display a Single Quiz Question
 
 What it does
 
