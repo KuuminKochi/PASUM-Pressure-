@@ -1,66 +1,87 @@
-Architecture & Setup
-
-- Set up the project file structure
-
-- Write the main game loop (while week 1–7)
-
-- Integrate everyone's functions into one working program
-
-- Write the struct Question and struct GameState
-
+# PASUM Pressure! - Developer Task Checklist
+**For: Anthonny Ng Hon Wei | FAC1003 Programming 2**
 
 ---
 
-Core Game Logic
+## Architecture & Setup
 
-- Write runAcademicQuiz() — load questions, score them, apply pass/fail penalties
-
-- Write runJatiDiriQuiz() — same but with 80% threshold and stress multiplier
-
-- Write checkStress() — branch into Counsellor or Healthy route
-
-- Write endingEvaluator() — check all three conditions, trigger correct ending
-
+- [ ] Set up project file structure (`main.cpp`, `questions.dat`, `story.txt`)
+- [ ] Define `struct Question` with `string* options` pointer array
+- [ ] Define `struct GameState` with `week`, `academic`, `jatiDiri`, `stress`
+- [ ] Write `main()` entry point with `while` game loop (week 1–7)
+- [ ] Write `initializeGame()` to set all starting values
 
 ---
 
-Data & File Handling
+## Core Game Logic
 
-- Write the question loader that reads from questions.dat
-
-- Parse questions into Question arrays using ifstream and getline
-
-- Handle file-not-found errors gracefully
-
-
----
-
-Pointers & Memory
-
-- Dynamic allocation for question option arrays (string*)
-
-- Proper cleanup (delete[]) after each quiz module
-
+- [ ] Write `runAcademicQuiz()` — score questions, apply +10 academic or +10 stress
+- [ ] Write `runJatiDiriQuiz()` — score questions, apply `stress *= 1.2` if < 80%
+- [ ] Write `checkStress()` — branch into Counsellor or Healthy route at threshold 50
+- [ ] Write `displayStory(int week)` — pull and display correct week narrative
+- [ ] Write `displayInterlude()` — display interlude text between quiz sections
+- [ ] Write `endingEvaluator()` — check all three conditions, trigger correct ending
 
 ---
 
-STL Integration
+## Data & File Handling
 
-- Use std::vector to store loaded questions
-
-- Use std::map for subject name to question bank mapping
-
+- [ ] Write question loader using `ifstream` and `getline`
+- [ ] Parse question text and options into `Question` array
+- [ ] Parse story and interlude text from `story.txt` by week number
+- [ ] Handle file-not-found error with a clear message and safe exit
 
 ---
 
-Polish & Final Assembly
+## Pointers & Memory
 
-- Integrate Faith's display functions into the correct game flow positions
+- [ ] Dynamically allocate `string* options = new string[4]` per question
+- [ ] Free memory with `delete[]` after each quiz module finishes
 
-- Write clearScreen() and scene transition logic
+---
 
-- Test all edge cases (stress = 50 exactly, all fail, all pass)
+## STL Integration
 
-- Write the header comment block and all documentation
+- [ ] Use `std::vector<Question>` to store loaded questions per subject
+- [ ] Use `std::map<string, vector<Question>>` to map subject name to question bank
 
-- Final compile, debug, and submission packaging
+---
+
+## Integration (Faith's Functions)
+
+- [ ] Plug `displayBar()` into weekly summary and stress check screens
+- [ ] Plug `displayWeekSummary()` at the end of each week loop iteration
+- [ ] Plug `getValidInput()` into all answer reading sections
+- [ ] Plug `displaySubjectMenu()` into academic quiz subject selection
+- [ ] Plug `displayQuestion()` into both quiz modules
+
+---
+
+## Polish & Final Assembly
+
+- [ ] Write `clearScreen()` for scene transitions
+- [ ] Test edge case — stress exactly 50.0
+- [ ] Test edge case — all academic quizzes failed
+- [ ] Test edge case — all quizzes passed perfectly
+- [ ] Test edge case — non-numeric and out-of-range inputs
+- [ ] Write header comment block (author, date, description, instructions)
+- [ ] Write inline comments for all calculation logic
+- [ ] Write function comments (purpose, parameters, return value)
+- [ ] Final compile with zero warnings
+- [ ] Package and submit via team leader before 3 April 2026
+
+---
+
+## Submission Checklist
+
+- [ ] All source files compiling cleanly
+- [ ] `questions.dat` included in submission
+- [ ] `story.txt` included in submission
+- [ ] Coding Proposal document completed
+- [ ] Problems from Sem 1 section written
+- [ ] Submitted to https://forms.gle/GkyxQm3FaVWCDJLn6 by Week 14
+
+---
+
+*Document prepared by: Anthonny Ng Hon Wei*
+*Last updated: March 2026*
