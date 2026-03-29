@@ -5,6 +5,11 @@
 
 using namespace std;
 
+// Purpose: Makes sure the user actually enters a valid number within the expected range
+// Why it works: Uses a while true loop that never stops until they give us good input.
+// If cin fails (they typed garbage), it clears the error flag and ignores the bad input.
+// If the number is out of range, it tells them and loops again. Basically a brute force
+// input validation that keeps asking until the user cooperates
 int getValidInput(int min, int max)
 {
     int choice;
@@ -35,8 +40,11 @@ int getValidInput(int min, int max)
 }
 
 
-// P1 — Display a Progress Bar
-
+// Purpose: Draws a nice visual progress bar in the terminal
+// Why it works: Takes a label and percentage, then uses loops to print filled blocks
+// for the progress and empty blocks for what's left. Divides percentage by 5 because
+// we want 20 blocks total (each block = 5%). Using unicode block characters makes
+// it look way better than just printing numbers, gives that game-like feel
 void displayBar(string label, int percentage)
 {
     cout << left << setw(16) << label << " [";
@@ -50,8 +58,11 @@ void displayBar(string label, int percentage)
     cout << "] " << right << setw(3) << percentage << "%" << endl;
 }
 
-// P2 — Display the Score Summary Screen
-
+// Purpose: Shows the player their stats at the end of each week in a fancy box
+// Why it works: Builds a text-based box using those unicode border characters and
+// prints out all three stats (academic, jati diri, stress) in a nice table format.
+// Also gives a little encouraging or concerning message based on stress levels.
+// The layout makes it easy to quickly see how youre doing after each week
 void displayWeekSummary(GameState state)
 {
     string labels[3] = {"Academic Score  ", "Jati Diri Score ", "Stress Level    "};
@@ -76,8 +87,10 @@ void displayWeekSummary(GameState state)
     cout << "╚══════════════════════════════╝" << endl;
 }
 
-// P4 — Subject Selection Menu
-
+// Purpose: Displays the subject selection menu so players can pick what to be tested on
+// Why it works: Prints out a nice box with three subject options (Chemistry, Physics, Math).
+// Uses getValidInput to make sure they actually pick 1, 2, or 3 and not something stupid.
+// Returns the choice number which main uses to know which question bank to load
 int displaySubjectMenu()
 {
     string subjects[3] = {"Chemistry", "Physics", "Mathematics"};
@@ -99,8 +112,10 @@ int displaySubjectMenu()
     return choice;
 }
 
-// P5 — Display a Single Quiz Question
-
+// Purpose: Displays a single quiz question with its answer options
+// Why it works: Takes the question data and formats it nicely with a divider line,
+// shows the question number and text, then lists options 1-4. Returns whatever
+// getValidInput gives us so we know which option they picked
 int displayQuestion(int questionNumber, string questionText, string* options)
 {
     cout << "----------------------------------------" << endl;
